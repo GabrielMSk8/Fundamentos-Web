@@ -21,29 +21,32 @@
     </ul>
     <h1 class="center">Entre em contato</h1>
 
-    <div class="container">
+    <div class="container-contato">
         <div>
             <h2>mande uma mensagem</h2>
             <form >
                 <div>
-                <label for="nome">Nome</label>
-                <input type="text"id= "nome">
+                    <label for="nome">Nome</label>
+                    <input type="text"id= "nome" onkeyup="validaNome()">
+                    <div id="txtNome"></div>
                 </div>
                 
                 
                 <div>
                 <label for="email">E-mail:</label>
-                <input type="email"id= "email">
+                <input type="email"id= "email" onkeyup="validaEmail()">
+                <div id="txtEmail"></div>
                 </div>
                  
                  
                 <div>
                 <label for="assunto">Assunto</label>
-                <textarea name="assunto" id="assunto" cols="80" rows="10"></textarea>
+                <textarea name="assunto" id="assunto" cols="50" rows="10" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div>
                 </div>
                 
                 
-                <button>Enviar</button>
+                <button onclick="enviar()"> Enviar</button>
         
             
         
@@ -56,17 +59,25 @@
         
     <p>Rua fradique coutinho, 1632</p>
     <p>São Paulo - SP</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2964465974087!2d-46.692443849823405!3d-23.557794267269635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce579801b5801d%3A0x951612ec077b81c9!2sR.%20Fradique%20Coutinho%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1676573067006!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2964465974087!2d-46.692443849823405!3d-23.557794267269635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce579801b5801d%3A0x951612ec077b81c9!2sR.%20Fradique%20Coutinho%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1676573067006!5m2!1spt-BR!2sbr" 
+    width="400" height="450" 
+    style="border:0;" allowfullscreen="" 
+    loading="lazy" referrerpolicy="no-referrer-when-downgrade" onmousemove="mapaZoom()" onmouseout="mapaNormal()"
+    id="mapa"></iframe>
+    </div>
 
 
     </div>
     
     
-
+    <hr>
     <footer>
         Todos os direitos reservados: Gabriel M. dos Santos &copy
     </footer>
-       
+
+    <script src="./assets/JS/script.js">
+
+       </script>   
 </body>
 </html>
